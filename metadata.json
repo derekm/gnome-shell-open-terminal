@@ -1,1 +1,11 @@
-{"shell-version": ["3.8.4"], "uuid": "gnome-shell-open-terminal@hackunix.org", "name": "GNOME Shell Open Terminal", "description": "When desktop icons are disabled, nautilus-open-terminal is not effective. This extension re-introduces an \"Open Terminal\" menu item when right-clicking on the desktop background."}
+{
+  "description": "When desktop icons are disabled, nautilus-open-terminal is not effective. This extension re-introduces an \"Open Terminal\" menu item when right-clicking on the desktop background.",
+  "name": "GNOME Shell Open Terminal",
+  "shell-version": [
+    "3.8",
+    "3.9",
+    "3.10"
+  ],
+  "url": "https://github.com/derekm/gnome-shell-open-terminal",
+  "uuid": "gnome-shell-open-terminal@hackunix.org"
+}
