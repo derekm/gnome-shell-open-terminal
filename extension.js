@@ -6,6 +6,15 @@ const PopupMenu = imports.ui.popupMenu;
 const LayoutManager = imports.ui.main.layoutManager;
 const BackgroundMenu = imports.ui.backgroundMenu;
 
+const Me = imports.misc.extensionUtils.getCurrentExtension();
+const Convenience = Me.imports.convenience;
+const Gettext = imports.gettext.domain('gnome-shell-open-terminal');
+const _ = Gettext.gettext;
+
+function init() {
+    Convenience.initTranslations("gnome-shell-open-terminal");
+}
+
 function reloadLayout() {
     LayoutManager._bgManagers.forEach(function(mgr) { mgr.background.emit('changed'); });
 }
