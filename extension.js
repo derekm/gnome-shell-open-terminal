@@ -16,7 +16,13 @@ function init() {
 }
 
 function reloadLayout() {
-    LayoutManager._bgManagers.forEach(function(mgr) { mgr.background.emit('changed'); });
+    LayoutManager._bgManagers.forEach(
+        function(mgr) {
+            if (!mgr.background)
+                mgr.emit('changed');
+            else // < gnome-shell-3.12?
+                mgr.background.emit('changed');
+        });
 }
 
 function enable() {
