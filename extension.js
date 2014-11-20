@@ -6,7 +6,9 @@ const PopupMenu = imports.ui.popupMenu;
 const LayoutManager = imports.ui.main.layoutManager;
 const BackgroundMenu = imports.ui.backgroundMenu;
 
-const Me = imports.misc.extensionUtils.getCurrentExtension();
+const ExtensionUtils = imports.misc.extensionUtils;
+const Me = ExtensionUtils.getCurrentExtension();
+const Version = Me.imports.version;
 const Convenience = Me.imports.convenience;
 const Gettext = imports.gettext.domain('gnome-shell-open-terminal');
 const _ = Gettext.gettext;
