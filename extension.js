@@ -47,6 +47,7 @@ function enable() {
     BackgroundMenu.BackgroundMenu.prototype._old_init = BackgroundMenu.BackgroundMenu.prototype._init;
     BackgroundMenu.BackgroundMenu.prototype._init = function(source) {
         this._old_init(source);
+        this.actor.add_style_class_name('popup-menu-box');
         this.addAppAction(_("Open Terminal"), 'gnome-terminal.desktop', 0);
     };
 
