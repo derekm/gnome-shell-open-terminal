@@ -49,7 +49,8 @@ class OpenTerminalExtension {
                 let actor = mgr.backgroundActor;
                 actor._backgroundMenu.addAppAction(_("Open Terminal"), 'org.gnome.Terminal.desktop', 0);
                 actor._backgroundManager.addMenu(actor._backgroundMenu);
-            });
+            }
+        );
     }
 
     disable() {
@@ -58,6 +59,9 @@ class OpenTerminalExtension {
                 let actor = mgr.backgroundActor;
                 actor._backgroundMenu.destroy();
                 BackgroundMenu.addBackgroundMenu(actor, LayoutManager);
-            });
+            }
+        );
+        PopupMenu.PopupMenu.prototype.addAppAction = undefined;
+        PopupMenu.PopupMenu.prototype.addActionAt = undefined;
     }
 }
